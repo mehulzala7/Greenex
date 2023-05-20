@@ -5,18 +5,19 @@
 
 <div class="container">
     <div class="p-4 m-4">
-        <div class="col-lg-4 mt-4 border mb-4 mx-auto rounded pt-4">
+        <div class="col-lg-4 mt-4 border mb-4 mx-auto rounded pt-4" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
             <div class="text-center col">
-            
-                <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shopping_cart_with_food_clip_art_2.svg/307px-Shopping_cart_with_food_clip_art_2.svg.png" alt=""
+
+                <img
+                src="/image/download/uploads/products/result.png" alt=""
                 class="" style="height: 150px;">
             <!-- <hr> -->
-            <div class="display-8">Create An Account</div>
+            <div style="font-weight: 600;
+    font-size: 30px;color:#689F38;">Sign In</div>
             <hr>
             </div>
-            <h3 hidden class="alert alert-light border mt-4 mb-4 rounded">Login Here</h3>
-            <form action="/login" method="POST">
+            <h3 hidden class="alert alert-light border mt-4 mb-4 rounded">Sign In</h3>
+            <form action="/login/" method="POST">
                 
                 {% csrf_token %}
 
@@ -30,7 +31,8 @@
                     <label for="">Email</label>
                     <input required type="email" name="email" id=""
                     value="{{values.email}}" 
-                    class=" form-control-sm form-control" placeholder="example@gmail.com">
+                    class=" form-control-sm form-control" placeholder="example@gmail.com"
+                    style=" box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
 
 
@@ -40,13 +42,20 @@
                     <input type="password" 
                     name="password" 
                     id=""
-                     class="form-control form-control-sm" placeholder="********">
+                     class="form-control form-control-sm"
+                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
 
                 <hr>
                 <div class="form-group">
-                    <input class="btn btn-sm btn-info col-lg-4" type="submit" value="Login">
+                    <input class="btn btn-sm btn-info col-lg-4" style="margin-left: 100px;background: #689F38;" type="submit" value="Sign In">
                 </div>
+                <p class="text-base text-[#adadad]" style="margin-left:48px">
+                Not have an account?
+                <a href="/signup" class="" style="color:#689F38;">
+                  Sign Up
+                </a>
+              </p>
 
                 
             </form>

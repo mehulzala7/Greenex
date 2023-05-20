@@ -8,17 +8,18 @@
     <div class="p-4 m-4">
 
         
-        <div class="col-lg-5 rounded mx-auto border pt-4">
+        <div class="col-lg-5 rounded mx-auto border pt-4" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
             <div class="text-center col">
             
                 <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shopping_cart_with_food_clip_art_2.svg/307px-Shopping_cart_with_food_clip_art_2.svg.png" alt=""
+                src="/image/download/uploads/products/result.png" alt=""
                 class="" style="height: 150px;">
             <!-- <hr> -->
-            <div class="display-8">Create An Account</div>
+            <div style="font-weight: 600;
+    font-size: 30px;color:#689F38;">Sign Up</div>
             <hr>
             </div>
-            <h3 hidden class="alert alert-light border rounded">Create An Account</h3>
+            <h3 hidden class="alert alert-light border rounded">Sign Up</h3>
             <form action="/signup" method="POST">
                 
                 {% csrf_token %}
@@ -33,7 +34,7 @@
                     <label for="">First Name</label>
                     <input type="text" name="firstname"
                      id="" value="{{values.first_name}}" class="form-control form-control-sm" 
-                     placeholder="">
+                     placeholder="" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
 
                 <!-- last name -->
@@ -41,7 +42,7 @@
                     <label for="">Last Name</label>
                     <input type="text" name="lastname" 
                     id="" value="{{values.last_name}}" class="form-control form-control-sm"
-                    >
+                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
 
                 <!-- phone -->
@@ -50,15 +51,15 @@
                     <input type="text" name="phone" 
                     id="" class="form-control form-control-sm"
                     value="{{values.phone}}"
-                    placeholder="565698959"
-                    >
+                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
                 <!-- email -->
                 <div class="form-group">
                     <label for="">Email</label>
                     <input required type="email" name="email" id=""
                     value="{{values.email}}" 
-                    class=" form-control-sm form-control" placeholder="example@gmail.com">
+                    class=" form-control-sm form-control" placeholder="edward@gmail.com"
+                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
 
 
@@ -68,16 +69,21 @@
                     <input type="password" 
                     name="password" 
                     id=""
-                     class="form-control form-control-sm" placeholder="********">
+                     class="form-control form-control-sm"
+                    style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
                 </div>
 
                 <hr>
                 <div class="form-group">
-                    <input class="btn btn-sm btn-info" type="submit" value="Create An Account ">
+                    <input class="btn btn-sm btn-info col-lg-4" style="margin-left: 130px;background: #689F38;" type="submit" value="Sign Up">
                 </div>
-
-                
             </form>
+            <p class="text-base text-[#adadad]" style="margin-left:87px">
+                Not have an account?
+                <a href="/signup" class=""style=" color: #689F38;">
+                  Sign In
+                </a>
+              </p>
         </div>
     </div>
 </div>
